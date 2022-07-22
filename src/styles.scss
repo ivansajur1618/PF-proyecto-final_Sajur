@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+
+.body {
+    height: max-content;
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 27% 73%;
+    grid-template-areas: 
+     "nav-bar nav-bar"
+     "tool-bar main"      
+    ;
+  }
+
+  .tool-bar{
+    grid-area: tool-bar;
+    height: fit-content;
+  }
+
+  .nav-bar{
+    grid-area: nav-bar;
+ }
+
+ .main{
+    grid-area: main;
+ }
+

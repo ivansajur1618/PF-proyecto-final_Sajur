@@ -1,0 +1,16 @@
+<router-outlet></router-outlet>
+
+<form [formGroup]="FormularioEditar" (ngSubmit)="actualizarUser(FormularioEditar.value)">
+    alumno : <input type="text" formControlName="nombre">
+    <!-- <span *ngIf="this.FormularioEditar.get('nombre')?.errors?.['required']">Campo nombre requerido</span> -->
+
+
+    curso : <input type="text" formControlName="curso">
+
+
+    inscripcion : <input type="number" formControlName="inscripciones">
+
+    id : <input type="text" formControlName="id"> 
+
+    <button type="submit">actualizar usuario</button>
+</form>

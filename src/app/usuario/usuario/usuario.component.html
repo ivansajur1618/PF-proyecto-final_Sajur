@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+
+<form [formGroup]="formularioAdministrador" [ngClass]="visible? 'yes' : 'no' ">
+   
+    Nombre de Usuario: <input formControlName="nombre" type="text">
+    <span *ngIf="this.formularioAdministrador.get('nombre')?.errors?.['required'] && formularioAdministrador.get('nombre')?.touched">campo obligatorio</span>
+    Contraseña :  <input formControlName="contraseña" type="password"> 
+    <span *ngIf="this.formularioAdministrador.get('contraseña')?.errors?.['required'] && formularioAdministrador.get('contraseña')?.touched">campo obligatorio</span>
+   </form>
+   <!-- <a routerLink="tabla">tabla</a> -->
+   <button mat-button color="accent" routerLink="tabla">TABLA</button> 
